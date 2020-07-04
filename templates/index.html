@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zillow API Tool</title>
+    <script>
+        {% if messages %}
+            {% for message in messages %}
+                alert(message);
+            {% endfor %}
+        {% endif %}
+    </script>
+</head>
+<body>
+    <form enctype = "multipart/form-data" action = "#" method = "post">
+        {% csrf_token %}
+        {{ form }}       
+        <input type = "submit" value = "Upload">
+     </form>
+
+</body>
+</html>
