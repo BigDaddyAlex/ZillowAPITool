@@ -13,6 +13,8 @@
     </script>
 </head>
 <body>
+    <div>Upload a csv with addresses here and you will be provided with property information from Zillow</div>
+    <br>
     <form enctype = "multipart/form-data" action = "#" method = "post">
         {% csrf_token %}
         {{ form }}       
