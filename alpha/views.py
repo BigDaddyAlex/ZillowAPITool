@@ -36,6 +36,13 @@ def downloadpage(request):
         response['Content-Disposition'] = 'inline; filename=' + os.path.basename(currdir)
         return response
 
+def inputsamplepage(request):
+    currdir=os.path.join(os.getcwd(),'input.csv')
+    with open(currdir, 'rb') as fh:
+        response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+        response['Content-Disposition'] = 'inline; filename=' + os.path.basename(currdir)
+        return response
+
     
 
 

@@ -14,7 +14,14 @@
 </head>
 <body>
     <div>Upload a csv with addresses here and you will be provided with property information from Zillow</div>
+    
     <br>
+    <div>See below an example of the input.csv you can upload:</div> 
+    <a href="/inputsample/">input.csv</a>   
+    <br>
+    <br>
+    
+
     <form enctype = "multipart/form-data" action = "#" method = "post">
         {% csrf_token %}
         {{ form }}       

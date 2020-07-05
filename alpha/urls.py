@@ -7,5 +7,6 @@ import os
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('download/', views.downloadpage, name='downloadpage'),
+    path('inputsample/', views.inputsamplepage, name='inputsamplepage'),
     
 ]
