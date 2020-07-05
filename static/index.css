@@ -8,7 +8,7 @@ body {
   .layer {
     color: white;
     width: 70%;
-    height: 30%;
+    height: 40%;
     position: fixed;
     top: 50%;
     left: 40%;
@@ -35,3 +35,17 @@ a {
   color: black
 }
 
+.myfieldclass {
+  font-size: 0.8em;
+}
+
+.bottom {
+  font-size: 0.8em;
+  color: white;
+  position:fixed;
+  bottom:0px;
+  height:30px;
+  
+  left: 45%;
+
+}
