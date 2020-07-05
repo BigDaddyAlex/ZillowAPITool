@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zillow API Tool</title>
-    <script>
-        {% if messages %}
-            {% for message in messages %}
-                alert(message);
-            {% endfor %}
-        {% endif %}
-    </script>
-</head>
-<body>
-    <div>Upload a csv with addresses here and you will be provided with property information from Zillow</div>
-    
-    <br>
-    <div>See below an example of the input.csv you can upload:</div> 
-    <a href="/inputsample/">input.csv</a>   
-    <br>
-    <br>
-    
-
-    <form enctype = "multipart/form-data" action = "#" method = "post">
-        {% csrf_token %}
-        {{ form }}       
-        <input type = "submit" value = "Upload">
-     </form>
-
-</body>
+   <head>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'index.css' %}" type="text/css" />
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Zillow API Tool</title>
+      <script>
+         {% if messages %}
+             {% for message in messages %}
+                 alert(message);
+             {% endfor %}
+         {% endif %}
+      </script>
+   </head>
+   <body>
+      <div class="layer">
+         <div>Upload a csv with addresses here and you will be provided with property information from Zillow</div>
+         <br>
+         <div>Here's an example of the input.csv you can upload:
+            <button class="button"><a href="/inputsample/" >input.csv</a> </button>
+         </div>
+           
+         <br>
+         <br>
+         <form enctype = "multipart/form-data" action = "#" method = "post" class="form">
+            {% csrf_token %}
+            <div >{{ form }}</div>
+            <input type = "submit" value = "Upload" class="button">
+         </form>
+      </div>
+   </body>
 </html>
